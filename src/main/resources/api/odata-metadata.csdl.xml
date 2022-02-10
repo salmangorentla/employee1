@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:DataServices>
+    <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="odata4.namespace">
+      <EntityType Name="Employees">
+        <Key>
+          <PropertyRef Name="EmployeeName" />
+        </Key>
+        <Property Name="EmployeeName" Type="Edm.String" MaxLength="40" Unicode="false" />
+        <Property Name="Designation" Type="Edm.String" MaxLength="30" Unicode="false" />
+        <Property Name="CompanyName" Type="Edm.String" MaxLength="30" Unicode="false" />
+		<Property Name="EmployeeID" Type="Edm.String" MaxLength="30" Unicode="false" />
+        <Property Name="Address" Type="Edm.String"  MaxLength="5" Unicode="false" />
+		</EntityType>
+      <EntityContainer Name="OData4EntityContainer">
+        <EntitySet Name="Employees" EntityType="odata4.namespace.Employees">
+		</EntitySet>
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
